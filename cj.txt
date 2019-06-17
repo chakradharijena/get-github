@@ -1,1 +1,82 @@
-first file
+package training.demo.test;
+
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeTest;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeMethod;
+
+public class SeleniumTestNg 
+{
+  WebDriver driver;
+	
+  @BeforeSuite
+  public void test1() 
+  {
+	  System.out.println("login");
+	  System.setProperty("webdriver.chrome.driver", "C:\\Users\\Ajinkya\\Desktop\\ASSIGNMENT\\Software Testing\\chromedriver.exe");
+	  
+	  driver=new ChromeDriver();
+	  driver.get("https://opensource-demo.orangehrmlive.com/");
+	  
+  }
+
+  @BeforeTest
+  public void Login()
+  {
+	  driver.findElement(By.id("txtUsername")).sendKeys("Admin");
+	  driver.findElement(By.id("txtPassword")).sendKeys("admin123");
+	  driver.findElement(By.xpath("//*[@id=\"btnLogin\"]")).click();
+  }
+  
+  @Test
+  public void PIM() throws InterruptedException
+  {
+	  driver.findElement(By.linkText("PIM")).click();
+	  
+	  driver.findElement(By.xpath("//*[@id=\"menu_pim_viewEmployeeList\"]")).click();
+	  
+	  driver.findElement(By.id("empsearch_employee_name_empName")).sendKeys("Robert Craig");
+	  driver.findElement(By.id("empsearch_id")).sendKeys("0006");
+	  
+	  WebElement element=driver.findElement(By.id("empsearch_employee_status"));
+	  Select item=new Select(element);
+	  item.selectByVisibleText("Full-Time Permanent");
+	  
+	  driver.findElement(By.id("empsearch_supervisor_name")).sendKeys("	John Smith");
+	  
+	  WebElement sel=driver.findElement(By.id("empsearch_job_title"));
+	  Select item2=new Select(sel);
+	  item2.selectByVisibleText("Sales Manager");
+	  
+	  WebElement subele=driver.findElement(By.id("empsearch_sub_unit"));
+	  Select item3=new Select(subele);
+	  item3.selectByVisibleText("Sales");
+	  
+	  Thread.sleep(1000);
+	  driver.findElement(By.xpath("//*[@id=\"searchBtn\"]")).click();
+	  System.out.println("search....");
+  }
+  
+  @Test
+  public void LEAVE()
+  {
+	  driver.findElement(By.linkText("Leave")).click();
+  }
+  
+  @AfterSuite
+  public void afterSuite() throws InterruptedException 
+  {
+	  driver.findElement(By.xpath("//*[@id=\"welcome\"]")).click();
+	  Thread.sleep(1000);
+	  driver.findElement(By.xpath("//*[@id=\"welcome-menu\"]/ul/li[2]/a")).click();
+	  System.out.println("logout....");
+	  driver.close();
+  }
+
+}
