@@ -1,0 +1,126 @@
+package training.demo.model;
+
+public class Employee {
+	
+	
+	public int id;
+	public String name;
+	public double sal;
+	
+	public Employee() {
+		super();
+	}
+
+	/**
+	 * @param id
+	 * @param name
+	 * @param sal
+	 */
+	public Employee(int id, String name, double sal) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.sal = sal;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public double getSal() {
+		return sal;
+	}
+
+	public void setSal(double sal) {
+		this.sal = sal;
+	}
+
+	@Override
+	public String toString() {
+		return "Employee [id=" + id + ", name=" + name + ", sal=" + sal + "]";
+	}
+	
+	
+	
+
+}
+=====================================================================================================================
+package training.demo.service;
+
+import training.demo.model.Employee;
+
+public class EmployeeService {
+	
+public double calcSalary(Employee e) {
+	
+	
+	return e.getSal()*12;
+}
+
+public int apprisal(Employee e) {
+	
+	if(e.getSal()>1000) {
+	return 10000;
+}
+else 
+	return 500;
+}
+}
+========================================================
+package training.demo.test;
+
+import org.testng.AssertJUnit;
+import org.testng.annotations.Test;
+
+import training.demo.model.Employee;
+import training.demo.service.EmployeeService;
+
+public class NewTest {
+	Employee e=new Employee();
+	EmployeeService mservice=new EmployeeService();
+	
+  @Test
+  public void salaryYearly() {
+	  e.setId(1);
+	  e.setName("ramukaka");
+	  e.setSal(10000);
+	  double eee=mservice.calcSalary(e);
+	  AssertJUnit.assertEquals(eee, 120000D);
+  }
+  @Test
+  public void approsalChech1000() {
+	 e.setId(1);
+	 e.setName("ramukak");
+	 e.setSal(10000);
+	 double kkk=mservice.apprisal(e);
+			AssertJUnit.assertEquals(kkk, 10000D); 
+	 
+	  
+  }
+  @Test
+  public void approsalcheck500() {
+	e.setId(1);
+	e.setName("ramukaka");
+	e.setSal(500);
+	double ll=mservice.apprisal(e);
+	AssertJUnit.assertEquals(ll, 5000D);
+	
+	
+	  
+  }
+  
+}
+
+
