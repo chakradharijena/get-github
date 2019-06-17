@@ -1,1 +1,76 @@
-dlllllllncanlanlanclanclanclanls
+package hh;
+
+import org.testng.annotations.Test;
+
+import com.sun.xml.internal.ws.api.ImpliesWebServiceFeature;
+
+import org.testng.annotations.BeforeTest;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.AfterTest;
+
+public class NewTest {
+ WebDriver driver;
+
+ @BeforeTest
+  public void beforeTest() {
+	System.setProperty("webdriver.chrome.driver","C:\\Users\\chakradhari jena\\Desktop\\textng\\New folder\\selenium\\chromedriver_win32\\chromedriver.exe");  
+	 driver=new ChromeDriver();
+	 driver.get("https://opensource-demo.orangehrmlive.com/");
+  }
+  
+  @Test
+  public void login() throws InterruptedException {
+	  Thread.sleep(40);
+	  driver.findElement(By.name("txtUsername")).sendKeys("Admin");
+	  
+	  
+	  Thread.sleep(100);
+	  driver.findElement(By.name("txtPassword")).sendKeys("admin123");
+	  
+	  Thread.sleep(100);
+	  driver.findElement(By.xpath("//*[@id=\"btnLogin\"]")).click();
+  
+	  Thread.sleep(1000);
+	  driver.findElement(By.id("menu_leave_viewLeaveModule")).click();
+	  Thread.sleep(1000);
+	  driver.findElement(By.id("menu_leave_Configure")).click();
+	 // WebElement select= driver.findElement(By.id("menu_leave_Configure"));
+	  //Select drop=new Select(select);
+	 // drop.selectByVisibleText("Leave Period");
+	 driver.findElement(By.id("menu_leave_defineLeavePeriod")).click();
+/*-----------------------------------------	next part of code--------------------------------------------------*/ 
+	 
+	Thread.sleep(1000);
+	driver.findElement(By.id("btnEdit")).click();
+	// WebElement select= driver.findElement(By.id("menu_leave_defineLeavePeriod")).c
+	Select seli=new Select(driver.findElement(By.xpath("//*[@id=\"leaveperiod_cmbStartMonth\"]")));
+	seli.selectByIndex(3);
+	Thread.sleep(100);
+	Select me=new Select(driver.findElement(By.xpath("//*[@id=\"leaveperiod_cmbStartDate\"]")));
+	me.selectByIndex(5);
+	Thread.sleep(1000);
+	driver.findElement(By.id("btnEdit")).click();
+
+	
+  }
+
+  @AfterTest
+  public void afterTest() throws InterruptedException {
+Thread.sleep(1000);
+	  driver.findElement(By.xpath("//*[@id=\"welcome\"]")).click();
+  Thread.sleep(500);
+//	  driver.findElement(By.xpath("//*[@id=\"aboutDisplayLink\"]")).click();
+//	  
+	  Thread.sleep(1000);
+	  driver.findElement(By.xpath("//*[@id=\"welcome-menu\"]/ul/li[2]/a")).click();
+	  
+	  
+     //Thread.sle
+	  
+  }
+
+}
