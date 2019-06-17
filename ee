@@ -1,0 +1,368 @@
+QUESTION 3.
+
+
+QUES 1.
+
+$ git init
+Initialized empty Git repository in C:/Users/iet19/Desktop/gitee/.git/
+
+iet19@IET42 MINGW64 ~/Desktop/gitee (master)
+$ git config --global http.proxy http://192.168.10.2:808
+
+iet19@IET42 MINGW64 ~/Desktop/gitee (master)
+$ git config --global user.name "chakradharijena"
+
+iet19@IET42 MINGW64 ~/Desktop/gitee (master)
+$ git config --global user.email chakradharijena545@gmail.com
+
+
+iet19@IET42 MINGW64 ~/Desktop/gitee (master)
+$ git clone https://github.com/boly38/spring-petclinic-hsql-openshift-quickstart.git
+Cloning into 'spring-petclinic-hsql-openshift-quickstart'...
+remote: Enumerating objects: 160, done.
+remote: Counting objects: 100% (160/160), done.
+remote: Compressing objects: 100% (106/106), done.
+remote: Total 160 (delta 38), reused 160 (delta 38), pack-reused 0
+Receiving objects: 100% (160/160), 140.38 KiB | 435.00 KiB/s, done.
+Resolving deltas: 100% (38/38), done.
+
+2.TO NOT TO DOWNLOAD BUT TO MAKE CHANGES WE NEED TO FORK IT 
+
+fork will make a copy in our repo ,...without the original user request we can make our change
+
+==================================================================================
+3.
+process 1
+iet19@IET42 MINGW64 ~/Desktop/gitee1 (master)
+$ vim new.txt
+
+iet19@IET42 MINGW64 ~/Desktop/gitee1 (master)
+$ git add new.txt
+warning: LF will be replaced by CRLF in new.txt.
+The file will have its original line endings in your working directory
+
+iet19@IET42 MINGW64 ~/Desktop/gitee1 (master)
+$ git commit -m "add"
+[master (root-commit) a803736] add
+ 1 file changed, 2 insertions(+)
+ create mode 100644 new.txt
+----------------------------------------------------------------------------------------------
+process2..
+
+iet19@IET42 MINGW64 ~/Desktop/gitee1 (master)
+$ vim ll.txt
+
+iet19@IET42 MINGW64 ~/Desktop/gitee1 (master)
+$ vim kk.txt
+
+iet19@IET42 MINGW64 ~/Desktop/gitee1 (master)
+$ git add .
+warning: LF will be replaced by CRLF in kk.txt.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in ll.txt.
+The file will have its original line endings in your working directory
+
+iet19@IET42 MINGW64 ~/Desktop/gitee1 (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   kk.txt
+        new file:   ll.txt
+
+
+iet19@IET42 MINGW64 ~/Desktop/gitee1 (master)
+$ git commit -m "newww"
+[master 33f0b1c] newww
+ 2 files changed, 3 insertions(+)
+ create mode 100644 kk.txt
+ create mode 100644 ll.txt
+-------------------------------------------------------------------------------------------
+process3..
+
+$ git add -A
+warning: LF will be replaced by CRLF in qq.txt.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in ww.txt.
+The file will have its original line endings in your working directory
+
+iet19@IET42 MINGW64 ~/Desktop/gitee1 (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   qq.txt
+        new file:   ww.txt
+
+
+iet19@IET42 MINGW64 ~/Desktop/gitee1 (master)
+$ git commit -m "aa"
+[master 210321b] aa
+ 2 files changed, 6 insertions(+)
+ create mode 100644 qq.txt
+ create mode 100644 ww.txt
+=======================================================================================
+ques 4......
+
+$ git init
+Initialized empty Git repository in C:/Users/iet19/Desktop/gitee2/.git/
+
+iet19@IET42 MINGW64 ~/Desktop/gitee2 (master)
+$ git add html.txt
+fatal: pathspec 'html.txt' did not match any files
+
+iet19@IET42 MINGW64 ~/Desktop/gitee2 (master)
+$ ls
+html.txt.txt
+
+iet19@IET42 MINGW64 ~/Desktop/gitee2 (master)
+$ git add html.txt
+
+iet19@IET42 MINGW64 ~/Desktop/gitee2 (master)
+$ git commit -m "asdasds"
+[master (root-commit) 4153328] asdasds
+ 1 file changed, 16 insertions(+)
+ create mode 100644 html.txt
+
+
+
+iet19@IET42 MINGW64 ~/Desktop/gitee2 (master)
+$  git config --global http.proxy http://192.168.10.2:808
+
+iet19@IET42 MINGW64 ~/Desktop/gitee2 (master)
+$ git config --system --unset credential.helper
+
+
+iet19@IET42 MINGW64 ~/Desktop/gitee2 (master)
+$ git remote add origin https://github.com/chakradharijena/ASDMexam.git
+fatal: remote origin already exists.
+
+iet19@IET42 MINGW64 ~/Desktop/gitee2 (master)
+$ git push -u origin master
+Username for 'https://github.com': chakradharijena
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 279 bytes | 279.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/chakradharijena/ASDMexam.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+iet19@IET42 MINGW64 ~/Desktop/gitee2 (master)
+$
+
+==========================================================================================
+
+ques 5....
+what is merge request
+
+
+
+
+
+
+iet19@IET42 MINGW64 ~/Desktop/gitee3 (master)
+$ git init
+Initialized empty Git repository in C:/Users/iet19/Desktop/gitee3/.git/
+
+iet19@IET42 MINGW64 ~/Desktop/gitee3 (master)
+$ vim git.txt
+
+iet19@IET42 MINGW64 ~/Desktop/gitee3 (master)
+$ git add .
+warning: LF will be replaced by CRLF in git.txt.
+The file will have its original line endings in your working directory
+
+iet19@IET42 MINGW64 ~/Desktop/gitee3 (master)
+$ git stataus
+git: 'stataus' is not a git command. See 'git --help'.
+
+The most similar command is
+        status
+
+iet19@IET42 MINGW64 ~/Desktop/gitee3 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   git.txt
+
+
+iet19@IET42 MINGW64 ~/Desktop/gitee3 (master)
+$ git commet -m "asdsadas"
+git: 'commet' is not a git command. See 'git --help'.
+
+The most similar command is
+        commit
+
+iet19@IET42 MINGW64 ~/Desktop/gitee3 (master)
+$ git commit -m "asdsadas"
+[master (root-commit) dafd8ad] asdsadas
+ 1 file changed, 3 insertions(+)
+ create mode 100644 git.txt
+
+iet19@IET42 MINGW64 ~/Desktop/gitee3 (master)
+$ ls
+git.txt
+
+iet19@IET42 MINGW64 ~/Desktop/gitee3 (master)
+$ git branch
+* master
+
+iet19@IET42 MINGW64 ~/Desktop/gitee3 (master)
+$ git branch exam
+
+iet19@IET42 MINGW64 ~/Desktop/gitee3 (master)
+$ git checkout branch
+error: pathspec 'branch' did not match any file(s) known to git
+
+iet19@IET42 MINGW64 ~/Desktop/gitee3 (master)
+$ git checkout exam
+Switched to branch 'exam'
+
+iet19@IET42 MINGW64 ~/Desktop/gitee3 (exam)
+$ git branch
+* exam
+  master
+
+iet19@IET42 MINGW64 ~/Desktop/gitee3 (exam)
+$ vim exa.txt
+
+iet19@IET42 MINGW64 ~/Desktop/gitee3 (exam)
+$ git add .
+warning: LF will be replaced by CRLF in exa.txt.
+The file will have its original line endings in your working directory
+
+iet19@IET42 MINGW64 ~/Desktop/gitee3 (exam)
+$ git commit -m "adasd"
+[exam 0d85ff8] adasd
+ 1 file changed, 1 insertion(+)
+ create mode 100644 exa.txt
+
+iet19@IET42 MINGW64 ~/Desktop/gitee3 (exam)
+$ git remote add origin https://github.com/chakradharijena/git-merge-request.git
+
+iet19@IET42 MINGW64 ~/Desktop/gitee3 (exam)
+$ git push -u origin exam
+Username for 'https://github.com': chakradharijena
+mEnumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (6/6), 509 bytes | 509.00 KiB/s, done.
+Total 6 (delta 0), reused 0 (delta 0)
+
+To https://github.com/chakradharijena/git-merge-request.git
+ * [new branch]      exam -> exam
+Branch 'exam' set up to track remote branch 'exam' from 'origin'.
+
+iet19@IET42 MINGW64 ~/Desktop/gitee3 (exam)
+$ m
+bash: m: command not found
+
+iet19@IET42 MINGW64 ~/Desktop/gitee3 (exam)
+$ git checkout master
+Switched to branch 'master'
+
+iet19@IET42 MINGW64 ~/Desktop/gitee3 (master)
+$ git remote add origin https://github.com/chakradharijena/git-merge-request.git
+fatal: remote origin already exists.
+
+iet19@IET42 MINGW64 ~/Desktop/gitee3 (master)
+$ git push -u origin master
+Username for 'https://github.com': chakradharijena
+Total 0 (delta 0), reused 0 (delta 0)
+remote:
+remote: Create a pull request for 'master' on GitHub by visiting:
+remote:      https://github.com/chakradharijena/git-merge-request/pull/new/master
+remote:
+To https://github.com/chakradharijena/git-merge-request.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+iet19@IET42 MINGW64 ~/Desktop/gitee3 (master)
+$ vim new1.txt
+
+iet19@IET42 MINGW64 ~/Desktop/gitee3 (master)
+$ git add .
+warning: LF will be replaced by CRLF in new1.txt.
+The file will have its original line endings in your working directory
+
+iet19@IET42 MINGW64 ~/Desktop/gitee3 (master)
+$ git commit -m "saasda"
+[master 222014f] saasda
+ 1 file changed, 1 insertion(+)
+ create mode 100644 new1.txt
+
+iet19@IET42 MINGW64 ~/Desktop/gitee3 (master)
+$ git remote add origin https://github.com/chakradharijena/git-merge-request.git
+fatal: remote origin already exists.
+
+iet19@IET42 MINGW64 ~/Desktop/gitee3 (master)
+$ git push -u origin master
+Username for 'https://github.com': chakradharijena
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 285 bytes | 285.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+gitTo https://github.com/chakradharijena/git-merge-request.git
+   dafd8ad..222014f  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+iet19@IET42 MINGW64 ~/Desktop/gitee3 (master)
+$ git branch
+  exam
+* master
+
+iet19@IET42 MINGW64 ~/Desktop/gitee3 (master)
+$ git merge exam
+Merge made by the 'recursive' strategy.
+ exa.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 exa.txt
+
+iet19@IET42 MINGW64 ~/Desktop/gitee3 (master)
+$ git push
+Username for 'https://github.com': chakradharijena
+
+iet19@IET42 MINGW64 ~/Desktop/gitee3 (master)
+$ ^C
+
+iet19@IET42 MINGW64 ~/Desktop/gitee3 (master)
+$ ^C
+
+iet19@IET42 MINGW64 ~/Desktop/gitee3 (master)
+$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
