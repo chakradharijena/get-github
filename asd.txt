@@ -124,3 +124,593 @@ public class NewTest {
 }
 
 
+================================================================================
+
+
+
+Skip to content
+Using Gmail with screen readers
+Enable desktop notifications for Gmail.
+   OK  No thanks
+
+Conversations
+4.63 GB (30%) of 15 GB used
+Manage
+Terms · Privacy · Program Policies
+Last account activity: 0 minutes ago
+Details
+
+Madhuri@Madhuri-PC MINGW64 /
+$ git config --global user.name "madhuri"
+
+Madhuri@Madhuri-PC MINGW64 /
+$ git config --global user.email "madhuripatil462@gmail.com"
+
+Madhuri@Madhuri-PC MINGW64 /
+$ git init
+C:/Program Files/Git/.git: Permission denied
+
+Madhuri@Madhuri-PC MINGW64 /
+$ cd E:\GitRepo
+
+Madhuri@Madhuri-PC MINGW64 /e/GitRepo
+$ git init
+Initialized empty Git repository in E:/GitRepo/.git/
+
+Madhuri@Madhuri-PC MINGW64 /e/GitRepo (master)
+$ git log
+fatal: your current branch 'master' does not have any commits yet
+
+Madhuri@Madhuri-PC MINGW64 /e/GitRepo (master)
+$ nano abc.txt
+
+Madhuri@Madhuri-PC MINGW64 /e/GitRepo (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        abc.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Madhuri@Madhuri-PC MINGW64 /e/GitRepo (master)
+$ git ls
+git: 'ls' is not a git command. See 'git --help'.
+
+The most similar command is
+        lfs
+
+Madhuri@Madhuri-PC MINGW64 /e/GitRepo (master)
+$ ls
+abc.txt
+
+Madhuri@Madhuri-PC MINGW64 /e/GitRepo (master)
+$ git add abc.txt
+warning: LF will be replaced by CRLF in abc.txt.
+The file will have its original line endings in your working directory
+
+Madhuri@Madhuri-PC MINGW64 /e/GitRepo (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   abc.txt
+
+
+Madhuri@Madhuri-PC MINGW64 /e/GitRepo (master)
+$ git commit -m "First commit"
+[master (root-commit) 4a1f053] First commit
+ 1 file changed, 2 insertions(+)
+ create mode 100644 abc.txt
+
+Madhuri@Madhuri-PC MINGW64 /e/GitRepo (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+Madhuri@Madhuri-PC MINGW64 /e/GitRepo (master)
+$ git remote add origin https://github.com/madhuripatil1/Demo.git
+
+Madhuri@Madhuri-PC MINGW64 /e/GitRepo (master)
+$ git push -u origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 219 bytes | 54.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/madhuripatil1/Demo.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+Madhuri@Madhuri-PC MINGW64 /e/GitRepo (master)
+$ nano abc.txt
+
+Madhuri@Madhuri-PC MINGW64 /e/GitRepo (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   abc.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Madhuri@Madhuri-PC MINGW64 /e/GitRepo (master)
+$ git add abc.txt
+warning: LF will be replaced by CRLF in abc.txt.
+The file will have its original line endings in your working directory
+
+Madhuri@Madhuri-PC MINGW64 /e/GitRepo (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   abc.txt
+
+
+Madhuri@Madhuri-PC MINGW64 /e/GitRepo (master)
+$ git commit -m "First commit"
+[master 1693dd4] First commit
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+Madhuri@Madhuri-PC MINGW64 /e/GitRepo (master)
+$ git push -u origin master
+To https://github.com/madhuripatil1/Demo.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/madhuripatil1/Demo.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Madhuri@Madhuri-PC MINGW64 /e/GitRepo (master)
+$ git remote add origin https://github.com/madhuripatil1/Demo.git
+fatal: remote origin already exists.
+
+Madhuri@Madhuri-PC MINGW64 /e/GitRepo (master)
+$ git push -u origin master
+To https://github.com/madhuripatil1/Demo.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/madhuripatil1/Demo.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Madhuri@Madhuri-PC MINGW64 /e/GitRepo (master)
+$ git add abc.txt
+
+Madhuri@Madhuri-PC MINGW64 /e/GitRepo (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Madhuri@Madhuri-PC MINGW64 /e/GitRepo (master)
+$ git ls
+git: 'ls' is not a git command. See 'git --help'.
+
+The most similar command is
+        lfs
+
+Madhuri@Madhuri-PC MINGW64 /e/GitRepo (master)
+$ ls
+abc.txt
+
+Madhuri@Madhuri-PC MINGW64 /e/GitRepo (master)
+$ git commit -m "First commit"
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+Madhuri@Madhuri-PC MINGW64 /e/GitRepo (master)
+$ git push -u origin master
+To https://github.com/madhuripatil1/Demo.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/madhuripatil1/Demo.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Madhuri@Madhuri-PC MINGW64 /e/GitRepo (master)
+$ nano dd.txt
+
+Madhuri@Madhuri-PC MINGW64 /e/GitRepo (master)
+$ ls
+abc.txt  dd.txt
+
+Madhuri@Madhuri-PC MINGW64 /e/GitRepo (master)
+$ git add dd.txt
+warning: LF will be replaced by CRLF in dd.txt.
+The file will have its original line endings in your working directory
+
+Madhuri@Madhuri-PC MINGW64 /e/GitRepo (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   dd.txt
+
+
+Madhuri@Madhuri-PC MINGW64 /e/GitRepo (master)
+$ git commit -m"first commit"
+[master 6cf5c5e] first commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 dd.txt
+
+Madhuri@Madhuri-PC MINGW64 /e/GitRepo (master)
+$ git log
+commit 6cf5c5e2a8f1b90db2c77cf407779ad58a80bb6d (HEAD -> master)
+Author: madhuri <madhuripatil462@gmail.com>
+Date:   Sun Jun 16 07:14:49 2019 -0700
+
+    first commit
+
+commit 1693dd4d33342d88f42ccac9b0e77cdf7825faf0
+Author: madhuri <madhuripatil462@gmail.com>
+Date:   Sun Jun 16 07:04:22 2019 -0700
+
+    First commit
+
+commit 4a1f0532188d3ebe0029bbd729188d1561e16c1a (origin/master)
+Author: madhuri <madhuripatil462@gmail.com>
+Date:   Sun Jun 16 06:56:16 2019 -0700
+
+    First commit
+
+Madhuri@Madhuri-PC MINGW64 /e/GitRepo (master)
+$ git remote add origin https://github.com/madhuripatil1/madhurimonika.git
+fatal: remote origin already exists.
+
+Madhuri@Madhuri-PC MINGW64 /e/GitRepo (master)
+$ git remote add origin https://github.com/madhuripatil1/madhurimonika.git
+fatal: remote origin already exists.
+
+Madhuri@Madhuri-PC MINGW64 /e/GitRepo (master)
+$ git push -u origin master
+To https://github.com/madhuripatil1/Demo.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/madhuripatil1/Demo.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Madhuri@Madhuri-PC MINGW64 /e/GitRepo (master)
+$ cd ..
+
+Madhuri@Madhuri-PC MINGW64 /e
+$ cd ..
+
+Madhuri@Madhuri-PC MINGW64 /
+$ E:\repo1
+bash: E:repo1: command not found
+
+Madhuri@Madhuri-PC MINGW64 /
+$ cd E:\repo1
+
+Madhuri@Madhuri-PC MINGW64 /e/repo1
+$ git init
+Initialized empty Git repository in E:/repo1/.git/
+
+Madhuri@Madhuri-PC MINGW64 /e/repo1 (master)
+$ git nano file.txt
+git: 'nano' is not a git command. See 'git --help'.
+
+The most similar commands are
+        annotate
+        daemon
+
+Madhuri@Madhuri-PC MINGW64 /e/repo1 (master)
+$ ls
+
+Madhuri@Madhuri-PC MINGW64 /e/repo1 (master)
+$ nano file.txt
+
+Madhuri@Madhuri-PC MINGW64 /e/repo1 (master)
+$ ls
+file.txt
+
+Madhuri@Madhuri-PC MINGW64 /e/repo1 (master)
+$ git add file.txt
+warning: LF will be replaced by CRLF in file.txt.
+The file will have its original line endings in your working directory
+
+Madhuri@Madhuri-PC MINGW64 /e/repo1 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   file.txt
+
+
+Madhuri@Madhuri-PC MINGW64 /e/repo1 (master)
+$ git commit -m"1st commit"
+[master (root-commit) 1047aed] 1st commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 file.txt
+
+Madhuri@Madhuri-PC MINGW64 /e/repo1 (master)
+$ git remote add origin https://github.com/madhuripatil1/madhurimonika.git
+
+Madhuri@Madhuri-PC MINGW64 /e/repo1 (master)
+$ git push -u origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 214 bytes | 71.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/madhuripatil1/madhurimonika.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+Madhuri@Madhuri-PC MINGW64 /e/repo1 (master)
+$ nano file.txt
+
+Madhuri@Madhuri-PC MINGW64 /e/repo1 (master)
+$ git add file.txt
+warning: LF will be replaced by CRLF in file.txt.
+The file will have its original line endings in your working directory
+
+Madhuri@Madhuri-PC MINGW64 /e/repo1 (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   file.txt
+
+
+Madhuri@Madhuri-PC MINGW64 /e/repo1 (master)
+$ git commit -m"second commit"
+[master 90e66bd] second commit
+ 1 file changed, 2 insertions(+)
+
+Madhuri@Madhuri-PC MINGW64 /e/repo1 (master)
+$ git ls
+git: 'ls' is not a git command. See 'git --help'.
+
+The most similar command is
+        lfs
+
+Madhuri@Madhuri-PC MINGW64 /e/repo1 (master)
+$ ls
+file.txt
+
+Madhuri@Madhuri-PC MINGW64 /e/repo1 (master)
+$ git push -u origin master
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 258 bytes | 15.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/madhuripatil1/madhurimonika.git
+   1047aed..90e66bd  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+Madhuri@Madhuri-PC MINGW64 /e/repo1 (master)
+$ create branch cdac
+bash: create: command not found
+
+Madhuri@Madhuri-PC MINGW64 /e/repo1 (master)
+$ git checkout cdac
+error: pathspec 'cdac' did not match any file(s) known to git
+
+Madhuri@Madhuri-PC MINGW64 /e/repo1 (master)
+$ git branch
+* master
+
+Madhuri@Madhuri-PC MINGW64 /e/repo1 (master)
+$ git branch cdac
+
+Madhuri@Madhuri-PC MINGW64 /e/repo1 (master)
+$ git checkout cdac
+Switched to branch 'cdac'
+
+Madhuri@Madhuri-PC MINGW64 /e/repo1 (cdac)
+$ git branch
+* cdac
+  master
+
+Madhuri@Madhuri-PC MINGW64 /e/repo1 (cdac)
+$ nano mm.txt
+
+Madhuri@Madhuri-PC MINGW64 /e/repo1 (cdac)
+$ ls
+file.txt  mm.txt
+
+Madhuri@Madhuri-PC MINGW64 /e/repo1 (cdac)
+$ git add mm.txt
+warning: LF will be replaced by CRLF in mm.txt.
+The file will have its original line endings in your working directory
+
+Madhuri@Madhuri-PC MINGW64 /e/repo1 (cdac)
+$ git status
+On branch cdac
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   mm.txt
+
+
+Madhuri@Madhuri-PC MINGW64 /e/repo1 (cdac)
+$ git commit -m"cdac 1st commit"
+[cdac 6a417d0] cdac 1st commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 mm.txt
+
+Madhuri@Madhuri-PC MINGW64 /e/repo1 (cdac)
+$ git push -u origin cdac
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 276 bytes | 69.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+remote:
+remote: Create a pull request for 'cdac' on GitHub by visiting:
+remote:      https://github.com/madhuripatil1/madhurimonika/pull/new/cdac
+remote:
+To https://github.com/madhuripatil1/madhurimonika.git
+ * [new branch]      cdac -> cdac
+Branch 'cdac' set up to track remote branch 'cdac' from 'origin'.
+
+Madhuri@Madhuri-PC MINGW64 /e/repo1 (cdac)
+$ git log
+commit 6a417d0bfa2fdc1194d7b97f26f7de2d3bd46c24 (HEAD -> cdac, origin/cdac)
+Author: madhuri <madhuripatil462@gmail.com>
+Date:   Sun Jun 16 07:29:16 2019 -0700
+
+    cdac 1st commit
+
+commit 90e66bdb3ae5737fc969aa0b3898eeabd595c12e (origin/master, master)
+Author: madhuri <madhuripatil462@gmail.com>
+Date:   Sun Jun 16 07:22:53 2019 -0700
+
+    second commit
+
+commit 1047aed0b8bdfdd54e18768fff27885271b3a742
+Author: madhuri <madhuripatil462@gmail.com>
+Date:   Sun Jun 16 07:19:53 2019 -0700
+
+    1st commit
+
+Madhuri@Madhuri-PC MINGW64 /e/repo1 (cdac)
+$ git tag v1.0
+
+Madhuri@Madhuri-PC MINGW64 /e/repo1 (cdac)
+$ git checkout v1.0
+Note: checking out 'v1.0'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by performing another checkout.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -b with the checkout command again. Example:
+
+  git checkout -b <new-branch-name>
+
+HEAD is now at 6a417d0 cdac 1st commit
+
+Madhuri@Madhuri-PC MINGW64 /e/repo1 ((v1.0))
+$ git push origin cdac --tags
+Total 0 (delta 0), reused 0 (delta 0)
+To https://github.com/madhuripatil1/madhurimonika.git
+ * [new tag]         v1.0 -> v1.0
+
+Madhuri@Madhuri-PC MINGW64 /e/repo1 ((v1.0))
+$ git push origin --all
+Everything up-to-date
+
+Madhuri@Madhuri-PC MINGW64 /e/repo1 ((v1.0))
+$ git branch
+* (HEAD detached at v1.0)
+  cdac
+  master
+
+Madhuri@Madhuri-PC MINGW64 /e/repo1 ((v1.0))
+$ git checkout cdac
+Switched to branch 'cdac'
+Your branch is up to date with 'origin/cdac'.
+
+Madhuri@Madhuri-PC MINGW64 /e/repo1 (cdac)
+$ git branch
+* cdac
+  master
+
+Madhuri@Madhuri-PC MINGW64 /e/repo1 (cdac)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+Madhuri@Madhuri-PC MINGW64 /e/repo1 (master)
+$ git merge cdac
+Updating 90e66bd..6a417d0
+Fast-forward
+ mm.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 mm.txt
+
+Madhuri@Madhuri-PC MINGW64 /e/repo1 (master)
+$ git log
+commit 6a417d0bfa2fdc1194d7b97f26f7de2d3bd46c24 (HEAD -> master, tag: v1.0, origin/cdac, cdac)
+Author: madhuri <madhuripatil462@gmail.com>
+Date:   Sun Jun 16 07:29:16 2019 -0700
+
+    cdac 1st commit
+
+commit 90e66bdb3ae5737fc969aa0b3898eeabd595c12e (origin/master)
+Author: madhuri <madhuripatil462@gmail.com>
+Date:   Sun Jun 16 07:22:53 2019 -0700
+
+    second commit
+
+commit 1047aed0b8bdfdd54e18768fff27885271b3a742
+Author: madhuri <madhuripatil462@gmail.com>
+Date:   Sun Jun 16 07:19:53 2019 -0700
+
+    1st commit
+
+Madhuri@Madhuri-PC MINGW64 /e/repo1 (master)
+$ git pull https://github.com/madhuripatil1/madhurimonika.git
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (1/1), done.
+From https://github.com/madhuripatil1/madhurimonika
+ * branch            HEAD       -> FETCH_HEAD
+Updating 6a417d0..906b3de
+Fast-forward
+
+Madhuri@Madhuri-PC MINGW64 /e/repo1 (master)
+$ git pull https://github.com/madhuripatil1/madhurimonika.git
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (4/4), done.
+From https://github.com/madhuripatil1/madhurimonika
+ * branch            HEAD       -> FETCH_HEAD
+Updating 906b3de..60d32be
+Fast-forward
+ abc | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 abc
+
+Madhuri@Madhuri-PC MINGW64 /e/repo1 (master)
+$
+desc.txt
+Displaying desc.txt.
