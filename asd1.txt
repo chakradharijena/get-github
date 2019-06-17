@@ -1,0 +1,93 @@
+git init
+git commit
+git add hello.txt
+git status
+$ git commit -m "hello"
+first commit
+vim hello.txt   //to write into file
+:wq
+
+
+git remote add origin https://
+git remote
+git remote -v //to verifyyy push hua ke nai
+
+
+
+..................................
+to make sub folder
+click on plus sign and click on new repository
+here we will make sub directory
+------------------------------------------
+…or create a new repository on the command line
+echo "# devu" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/chakradharijena/devu.git
+git push -u origin master
+…or push an existing repository from the command line
+git remote add origin https://github.com/chakradharijena/devu.git
+git push -u origin master
+
+...........................................................................
+
+
+
+
+
+
+git mv <old file name ><new file name>
+git rm <oldfile name >
+git rm <old dir>
+
+
+git config --global http.proxy http://192.168.10.2:808
+git config --global http.proxy http://192.168.10.2:808
+git config --global user.name "chakradhari545"
+git config --global user.email chakradharijena545@gmail.com
+
+
+=======================================================
+
+
+
+iet84@IET29 MINGW64 ~/Desktop/Demo (master)
+$ git init
+Initialized empty Git repository in C:/Users/IET84/Desktop/Demo/.git/
+
+iet84@IET29 MINGW64 ~/Desktop/Demo (master)
+$ echo "hi" >> text.txt
+
+iet84@IET29 MINGW64 ~/Desktop/Demo (master)
+$ git add text.txt
+warning: LF will be replaced by CRLF in text.txt.
+The file will have its original line endings in your working directory
+
+iet84@IET29 MINGW64 ~/Desktop/Demo (master)
+$ git commit -m "c1"
+[master (root-commit) 884c7b3] c1
+ 1 file changed, 1 insertion(+)
+ create mode 100644 text.txt
+
+iet84@IET29 MINGW64 ~/Desktop/Demo (master)
+$ git remote add origin https://github.com/sonal1609/newDemo.git
+
+iet84@IET29 MINGW64 ~/Desktop/Demo (master)
+$ git push -u origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 204 bytes | 204.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/sonal1609/newDemo.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+iet84@IET29 MINGW64 ~/Desktop/Demo (master)
+$ ^C
+
+iet84@IET29 MINGW64 ~/Desktop/Demo (master)
+$
+
+
+git config --system --unset credential.helper
